@@ -90,6 +90,11 @@ When looking at the numerical results, I found out that out of the people who fa
 
 ## More data version
 
+```{r}
+fisherXY(mydata$race,mydata$cappun)
+```
+
+Statistically, every group is different than every group and everyone disagrees with each other. It was obvious from the P-value results we got and how low the P-value for each group was.
 
 # Discussion and Conclusion
 
