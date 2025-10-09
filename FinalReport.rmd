@@ -52,14 +52,16 @@ dd3 <- mydata %>% group_by(cappun,race) %>% summarize(count=n()) %>% mutate(prcn
 
 # the group_by followed by summarize(count=n())
 
-basicC <- ggplot(dd3,aes(x=cappun,y=count,fill=race))
+basicC <- ggplot(dd3,aes(x=race,y=count,fill=cappun))
 basicC + geom_bar(stat="identity",position="dodge")
 
 #Now for percentage plot
 
-basicCC <- ggplot(dd3,aes(x=cappun,y=prcnt*100,fill=race)) 
+basicCC <- ggplot(dd3,aes(x=race,y=prcnt*100,fill=cappun)) 
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
+
+The white branch and the other branch are similar when it comes to capital punishment, because they support it. The black branch don't support capital punishment. When you put the blue branch on top of the red branch for white, black and others, it adds up to 100.
 
 ## Now with The Most data (fewer variables gives more data points)
 
